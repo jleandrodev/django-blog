@@ -31,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'django.contrib.sites',
+    'app',
+    'markdownify',
+    'mdeditor'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +53,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MDEDITOR_CONFIGS = {
+    'default':{
+        'language': 'en'  # zh / en / es 
+    }
+}
 
 ROOT_URLCONF = 'blog.urls'
 

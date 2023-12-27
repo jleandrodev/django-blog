@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load markdownify %}
+
+{% block 'conteudo' %}
+<div class="col-sm-12">
+    <h1>{{post.titulo}}</h1>
+    <div>{{post.conteudo|markdownify|linebreaks}}</div>
+
+</div>
+{% endblock 'conteudo' %}
